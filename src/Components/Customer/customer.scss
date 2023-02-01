@@ -1,0 +1,54 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variable.scss";
+
+.customer {
+  margin    : 92px 0;
+  text-align: center;
+
+  h2 {
+    font-size  : 36px;
+    font-weight: 600;
+  }
+
+  .customer-inner {
+    margin-top: 48px;
+
+    .customer-review {
+      text-align: center;
+      margin    : 0 auto;
+
+      img {
+        display      : block;
+        margin       : 0 auto;
+        object-fit   : cover;
+        border-radius: 100%;
+      }
+
+      p {
+        display: inline-block;
+        margin : 0 auto;
+        width  : 800px;
+        margin : 15px 0;
+        color  : $desc-color;
+      }
+
+      h5 {
+        font-size  : 18px;
+        font-weight: 600;
+      }
+
+      span {
+        color: $desc-color;
+      }
+    }
+  }
+}
+
+.slick-dots li button:before {
+  margin-top: 18px;
+  font-size : 10px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $main-color !important;
+}

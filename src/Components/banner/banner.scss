@@ -1,0 +1,14 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variable.scss";
+
+.banner {
+  padding  : 0 15px;
+  transform: translateY(-83px);
+
+  &-inner {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow   : 0px 0px 10px 0px rgba(0, 0, 0, 0.37);
+    box-shadow        : 0px 0px 10px 0px rgba(0, 0, 0, 0.37);
+    top               : -83px;
+  }
+}

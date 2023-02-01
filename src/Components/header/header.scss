@@ -1,0 +1,125 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variable.scss";
+
+.cover {
+  position        : fixed;
+  width           : 100vw;
+  height          : 100vh;
+  background-color: #222;
+  opacity         : 0;
+  z-index         : -999;
+}
+
+.cover .cover-active {
+  opacity: 0.9;
+  z-index: 100;
+  @include transit(all, 0.5s);
+}
+
+.header {
+  .cover-active {
+    opacity: 0.9;
+    z-index: 100;
+    @include transit(all, 0.5s);
+  }
+
+  color           : white;
+  position        : fixed;
+  width           : 100vw;
+  top             : 0;
+  right           : 0;
+  left            : 0;
+  z-index         : 999;
+  transition      : 0.3s;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-inner {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+
+    .logo {
+      box-sizing: border-box;
+      display   : flex;
+      margin    : auto 0;
+    }
+
+    &-center {
+      box-sizing     : border-box;
+      display        : flex;
+      justify-content: flex-end;
+      margin-left    : 7px;
+
+      .nav-icon {
+        display: none;
+
+        text-align     : center;
+        padding        : 0 24px;
+        justify-content: center;
+
+        // &:hover {
+        //   background-color: $main-color;
+        // }
+        i {
+          line-height: 101px;
+          font-size  : 28px;
+        }
+      }
+
+      .nav-bar {
+        width      : 100%;
+        display    : flex;
+        align-items: center;
+
+        .nav-item {
+          display        : inline-block;
+          width          : 100%;
+          text-align     : center;
+          justify-content: center;
+          padding        : 0 28px;
+
+          &:hover {
+            background-color: $main-color;
+          }
+
+          a {
+            line-height: 101px;
+            color      : white;
+          }
+        }
+      }
+    }
+
+    &-right {
+      box-sizing     : border-box;
+      display        : flex;
+      justify-content: flex-end;
+
+      .header-item {
+        margin-left: 26px;
+
+        i {
+          line-height: 101px;
+          transition : 0.3s;
+
+          &:hover {
+            transform: scale(1.3);
+            color    : $main-color;
+          }
+        }
+      }
+
+      .cart::before {
+        content      : "|";
+        padding-right: 26px;
+        opacity      : 0.2;
+      }
+
+      .user::before {
+        content      : "|";
+        padding-right: 26px;
+        opacity      : 0.2;
+      }
+    }
+  }
+}

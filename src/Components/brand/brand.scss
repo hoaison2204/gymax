@@ -1,0 +1,27 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variable.scss";
+
+.brand {
+  margin: 48px 0;
+
+  &-inner {
+    margin         : 16px 0;
+    text-align     : center;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    @include cols(16.666666667%);
+
+    .brand-content {
+      img {
+        transition: 0.3s;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

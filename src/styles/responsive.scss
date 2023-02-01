@@ -1,0 +1,230 @@
+@media all and (max-width: 1200px) {
+  .header {
+    &-inner {
+      &-right {
+        display: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .header {
+    &-inner {
+      flex-wrap: nowrap;
+
+      .logo {
+        @include cols(30%);
+      }
+
+      &-center {
+        @include cols(70%);
+      }
+
+      .nav-icon {
+        display: block;
+      }
+
+      .nav-bar {
+        display: block;
+        @include transit(all, 0.5s);
+        z-index: 999;
+        @include transform(translateX(110%));
+        box-shadow      : -8px -7px 6px -2px rgba(0, 0, 0, 0.217);
+        position        : fixed;
+        top             : 0;
+        right           : 0;
+        background-color: black;
+        height          : 100vh;
+        width           : 40%;
+
+        .nav-item {
+          display: block;
+          margin : 0;
+          padding: 0;
+        }
+      }
+
+      .active {
+        @include transform(translateX(0));
+      }
+
+      &-right {
+        display: none;
+      }
+    }
+  }
+
+  .shopNow {
+    &-inner {
+      .shopNow-content {
+        h1 {
+          font-size: 48px;
+        }
+
+        p {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  .banner-item {
+    width: 50%;
+  }
+
+  #banner-id-1 {
+    order: 1;
+  }
+
+  #banner-id-2 {
+    order: 2;
+  }
+
+  #banner-id-3 {
+    order: 4;
+  }
+
+  #banner-id-4 {
+    order: 3;
+  }
+
+  #banner-id-5 {
+    order: 5;
+  }
+
+  #banner-id-6 {
+    order: 6;
+  }
+
+  .product-item {
+    @include cols(50%);
+  }
+
+  .brand-inner {
+    @include cols(33.333333%);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .customer {
+    .customer-inner {
+      .customer-review {
+        p {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &-top {
+      &-inner {
+        p {
+          width: auto;
+        }
+      }
+    }
+
+    &-center-inner {
+      @include cols(50%);
+    }
+  }
+
+  .footer-bottom {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .shopNow {
+    &-inner {
+      .shopNow-content {
+        width: 350px;
+
+        h1 {
+          font-size: 28px;
+        }
+
+        h3 {
+          font-size: 20px;
+        }
+
+        p {
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
+
+  .banner-item {
+    height: 208px;
+    width : 100%;
+  }
+
+  #banner-id-1 {
+    order: 1;
+  }
+
+  #banner-id-2 {
+    order: 2;
+  }
+
+  #banner-id-3 {
+    order: 3;
+  }
+
+  #banner-id-4 {
+    order: 4;
+  }
+
+  #banner-id-5 {
+    order: 5;
+  }
+
+  #banner-id-6 {
+    order: 6;
+  }
+
+  .tab-bar {
+    &-list {
+      li {
+        p {
+          font-size: 14px;
+          padding  : 12px 8px;
+        }
+
+        p:hover {
+          color        : $main-color;
+          border-bottom: 2px solid $main-color;
+        }
+
+        .active {
+          color        : $main-color;
+          border-bottom: 2px solid $main-color;
+        }
+      }
+    }
+  }
+
+  .brand-inner {
+    @include cols(50%);
+  }
+
+  .footer {
+    &-center-inner {
+      @include cols(100%);
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding   : 12px 0;
+
+    p {
+      margin     : 0 auto;
+      line-height: 32px;
+      width      : 300px;
+    }
+  }
+}

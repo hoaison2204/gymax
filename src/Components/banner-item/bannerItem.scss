@@ -1,0 +1,33 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variable.scss";
+
+.banner-item {
+  width           : 33.33333%;
+  box-sizing      : border-box;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  overflow        : hidden;
+  background-color: white;
+
+  .banner-img {
+    object-fit: cover;
+  }
+
+  .banner-content {
+    text-align: center;
+    width     : 290px;
+
+    h3 {
+      font-size     : 18px;
+      font-weight   : 600;
+      text-transform: uppercase;
+      margin        : 8px 0;
+    }
+
+    p {
+      font-size: 14px;
+      color    : $desc-color;
+    }
+  }
+}

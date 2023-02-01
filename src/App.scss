@@ -1,0 +1,9 @@
+@import "./styles/mixin.scss";
+@import "./styles/variable.scss";
+
+.line {
+  margin-top      : 40px 0;
+  max-width       : 1170px;
+  height          : 1px;
+  background-color: #ccc;
+}
