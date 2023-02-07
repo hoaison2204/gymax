@@ -17,38 +17,44 @@
 }
 
 .header {
-  .cover-active {
-    opacity: 0.9;
-    z-index: 100;
-    @include transit(all, 0.5s);
-  }
-
   color           : white;
   position        : fixed;
+  height          : 100px;
   width           : 100vw;
   top             : 0;
   right           : 0;
   left            : 0;
   z-index         : 999;
   transition      : 0.3s;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .cover-active {
+    opacity: 0.9;
+    z-index: 100;
+    @include transit(all, 0.5s);
+  }
+
 
   &-inner {
     display        : flex;
     flex-wrap      : wrap;
     justify-content: space-between;
+    position       : relative;
 
     .logo {
       box-sizing: border-box;
       display   : flex;
       margin    : auto 0;
+      position  : absolute;
+      top       : 24px;
     }
 
     &-center {
       box-sizing     : border-box;
       display        : flex;
       justify-content: flex-end;
-      margin-left    : 7px;
+      position       : absolute;
+      left           : 238px;
 
       .nav-icon {
         display: none;
@@ -76,7 +82,7 @@
           width          : 100%;
           text-align     : center;
           justify-content: center;
-          padding        : 0 28px;
+          padding        : 0 26px;
 
           &:hover {
             background-color: $main-color;
@@ -94,9 +100,11 @@
       box-sizing     : border-box;
       display        : flex;
       justify-content: flex-end;
+      position       : absolute;
+      right          : -1px;
 
       .header-item {
-        margin-left: 26px;
+        margin-left: 24px;
 
         i {
           line-height: 101px;
